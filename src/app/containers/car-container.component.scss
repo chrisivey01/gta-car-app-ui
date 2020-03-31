@@ -1,0 +1,66 @@
+ul{
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+ 
+.main-container{
+    margin:auto;
+    height:600px;
+    max-width:1280px;
+    display:block;
+
+    .screen-container{
+        height:100%;
+        border-style: solid;    
+        border-color:#333333;
+    }
+
+    .bottom-bar-container{
+        display:flex;
+        justify-content:space-between;
+        bottom: 0;
+        height: 40px;
+        width: 100%;
+        background-color:#333333;
+    }
+
+    #windows-start{
+        background-image:url('../../assets/windows.png');
+        height: 40px;  
+        width: 30px;
+        background-repeat:no-repeat;
+        border:none;
+        outline: none;
+        background-size: cover;
+        margin: auto;
+    }
+    
+    #windows-start:hover{
+        background-image:url('../../assets/windows-hover.png');
+        height: 40px;  
+        width: 30px;
+        background-repeat:no-repeat;
+        border:none;
+        outline: none;
+        background-size: cover;
+        opacity: 0.85;
+        margin: auto;
+    }
+    
+    
+    .center-item{
+        height: 40px;  
+        width: 60px;
+        text-align: center;
+    }
+    
+    #clock{
+        font-size:12px;
+        display:flex;
+        flex-direction:column;
+        color:white;
+        padding:6px;
+    }
+    
+}

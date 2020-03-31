@@ -1,0 +1,20 @@
+<div class="main-container">
+    <div class="screen-container">
+        <app-car-exchanger></app-car-exchanger>
+        <app-plate-changer></app-plate-changer>
+    </div>
+    <div class="bottom-bar-container">
+        <div class="center-item">
+            <div id="windows-start" (click)="test()"></div>
+        </div>
+        <div id="clock">
+            <ul>
+                <li>{{time | date: "MM-dd-yyyy"}}</li>
+                <li>{{time | date: "HH:mm:ss a"}}</li>
+            </ul>
+        </div>
+    </div>
+</div>
+
+
+<router-outlet></router-outlet>
