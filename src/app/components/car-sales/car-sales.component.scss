@@ -1,0 +1,19 @@
+.sales-container{
+    display:flex;
+    justify-content:space-around;
+    
+    .car-list-container{
+        display:block;
+    }
+
+    .car-sell-container{
+        display:block;
+    }
+
+    .list-of-cars{
+        max-height:350px;
+        height:350px;
+        overflow: auto;
+        background:none;
+    }
+}

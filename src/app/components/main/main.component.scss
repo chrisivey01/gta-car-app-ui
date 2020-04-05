@@ -1,0 +1,52 @@
+@import url("https://fonts.googleapis.com/icon?family=Material+Icons");
+
+mat-sidenav-container{
+    height: 100%;
+    background-size: 100% 100%;
+
+    .choices {
+        height:50px;
+    }
+
+    .choices:hover {
+        height:50px;
+        background-color: #999999;
+    }
+
+    .content{
+        display:flex;
+        align-items:center;
+    }
+
+    .side-nav-list{
+        overflow:hidden;
+    }
+}
+
+mat-sidenav {
+    width:150px;
+    background-color: #333333 !important;
+    overflow:hidden !important;
+
+    .mat-list-item-content{
+        color: #E3E3E3 !important;
+    }
+}
+
+.mat-drawer-inner-container{
+    overflow:inherit !important;
+}
+
+mat-toolbar {
+    background-color: #4D148C;
+    background-image:url('../../../assets/gsc.png');
+    background-size:contain;
+}
+
+
+mat-sidenav-content {
+    display:block;
+    background-color:#999999;
+    padding:20px;
+    // padding-bottom:10px;
+}

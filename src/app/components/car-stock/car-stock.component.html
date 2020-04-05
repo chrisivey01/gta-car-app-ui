@@ -1,0 +1,28 @@
+<!-- <div class="container"> -->
+<div class="car-stock-container" *ngIf="carStock">
+  <div class="example-container">
+    <h3>Car Stock</h3>
+    <div class="list-container">
+      <div cdkDropList #vehicleStock="cdkDropList" [cdkDropListData]="carStock.vehicleStock"
+        [cdkDropListConnectedTo]="[vehicleOut]" class="example-list" (cdkDropListDropped)="drop($event)">
+        <div class="example-box" *ngFor="let car of carStock.vehicleStock" cdkDrag>{{car.plate}} - ${{car.price}}</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="example-container">
+    <h3>Cars Out</h3>
+    <div class="list-container">
+      <div cdkDropList #vehicleOut="cdkDropList" [cdkDropListData]="carStock.vehicleOut"
+        [cdkDropListConnectedTo]="[vehicleStock]" class="example-list" (cdkDropListDropped)="drop($event)">
+        <div class="example-box" *ngFor="let car of carStock.vehicleOut" cdkDrag>{{car.plate}} - ${{car.price}}</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="example-container">
+    <div class="list-container">
+      <button mat-raised-button color="warn" (click)="submit()">Apply</button>
+    </div>
+  </div>
+</div>

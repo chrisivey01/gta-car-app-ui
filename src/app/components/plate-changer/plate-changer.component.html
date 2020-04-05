@@ -1,8 +1,39 @@
-<mat-form-field>
-    
-</mat-form-field>
+<!-- <button mat-raised-button (click)="isEditable = !isEditable">
+  {{!isEditable ? 'Enable edit mode' : 'Disable edit mode'}}
+</button> -->
 
-
-<button mat-raised-button (click)="openChanger()">
-    Plate Changer
-</button>
+<mat-horizontal-stepper linear #stepper>
+    <mat-step [stepControl]="firstFormGroup" [editable]="isEditable">
+        <form [formGroup]="firstFormGroup">
+            <ng-template matStepLabel>Previous license plate</ng-template>
+            <mat-form-field>
+                <mat-label>Plate</mat-label>
+                <input maxlength = 8 matInput formControlName="firstCtrl" required>
+            </mat-form-field>
+            <div>
+                <button mat-button matStepperNext>Next</button>
+            </div>
+        </form>
+    </mat-step>
+    <mat-step [stepControl]="secondFormGroup" [editable]="isEditable">
+        <form [formGroup]="secondFormGroup">
+            <ng-template matStepLabel>New license plate</ng-template>
+            <mat-form-field>
+                <mat-label>Plate</mat-label>
+                <input maxlength = 8 matInput formControlName="secondCtrl" required>
+            </mat-form-field>
+            <div>
+                <button mat-button matStepperPrevious>Back</button>
+                <button mat-button matStepperNext (click)="changePlate()">Finalize</button>
+            </div>
+        </form>
+    </mat-step>
+    <mat-step>
+        <ng-template matStepLabel>Done</ng-template>
+        <p>You are now done.</p>
+        <div>
+            <button mat-button matStepperPrevious>Back</button>
+            <button mat-button (click)="stepper.reset()">Reset</button>
+        </div>
+    </mat-step>
+</mat-horizontal-stepper>
