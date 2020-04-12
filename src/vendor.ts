@@ -4,5 +4,6 @@ import '@angular/platform-browser-dynamic';
 import '@angular/core';
 import '@angular/common';
 import '@angular/material';
-import '@angular/cdk';
+import 'deeppurple-amber.css';
+
 import 'rxjs';

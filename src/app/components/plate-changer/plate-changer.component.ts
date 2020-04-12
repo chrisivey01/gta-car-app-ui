@@ -27,8 +27,8 @@ export class PlateChangerComponent implements OnInit {
 
   changePlate(){
     this.plates = {
-      oldPlate: this.firstFormGroup.value.firstCtrl,
-      newPlate: this.secondFormGroup.value.secondCtrl
+      oldPlate: this.firstFormGroup.value.firstCtrl.toUpperCase(),
+      newPlate: this.secondFormGroup.value.secondCtrl.toUpperCase()
     }
 
     this.gscService.changePlate(this.plates).subscribe(
